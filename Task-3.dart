@@ -1,23 +1,42 @@
 import 'dart:io';
 
 void main() {
-  int x = 20;
+  var choice = int.parse(stdin.readLineSync()!);
+  int intA = 20; //1.Any DataType to String
+  int intA.toString();
 
-  print()
 
-1. Any DataType to String
-2. String to Integer
-3. String to Double
-4. String to Boolean
-5. Double to Integer
-6. Integer to Double
-7. Nullable String to String
-8. String to Nullable String
-9. Nullable Integer to Integer
-10. Integer to Nullable Integer
-11. Nullable Double to Double
-12. Double to Nullable Double''');
+String numberString = '20';
+   int.parse(numberString);
+  double.parse(numberString);
+  bool.parse(numberString);
+
+  double num1 = 10.01;  //5. Double to Integer
+   int num2 = num1.toInt();
+
+   int num1 = 9;
+   double num2 = num1.toDouble(); // 6. Integer to Double
+
+     String? a;
+  String b = a ?? 'city';
+
+    String area = 'abc';
+  String? areaName = area; // 8.
+
+  int? aa;
+  int bb = aa ?? 0;
+
+  int aa;
+  int? bb = aa ?? 0;
+
+double numberint? = 10;
+double numberDouble = numberInt.toDouble();
+
+  double aa = 20.5;
+  double? bbb = aa.toInt();
+
+
   print('Enter your choice:');
 
 }
-}
+  
