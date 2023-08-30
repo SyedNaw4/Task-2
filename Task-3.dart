@@ -29,7 +29,7 @@ String numberString = '20';
   int aa;
   int? bb = aa ?? 0;
 
-double numberint? = 10;
+double numberDouble? = 10;
 double numberDouble = numberInt.toDouble();
 
   double aa = 20.5;
