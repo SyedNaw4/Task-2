@@ -5,34 +5,25 @@ void main() {
     {'name': 'John', 'crop': 'Corn'},
     {'name': 'Wick', 'crop': 'Wheat'},
     {'name': 'Mike', 'crop': 'Rice'},
-    {'name': 'Siraj', 'crop': 'Potatoes'},
-    {'name': 'Dhoni', 'crop': 'Tomatoes'},
+    {'name': 'Siraj', 'crop': 'Potato'},
+    {'name': 'Dhoni', 'crop': 'Tomato'},
   ];
 
   print('Enter a crop:');
-  String inputCrop = stdin.readLineSync()!;
-  String? farmerName = cropName(farmers, inputCrop);
+  String? inputCrop = stdin.readLineSync();
 
-  if (farmerName != null) {
-    print('The farmer who grows $inputCrop is $farmerName.');
-  } else {
-    print('No farmer found for $inputCrop.');
-  }
-  
-  try {
-    farmerName = cropName(farmers, inputCrop);
-    print('Output(cropName): $farmerName');
-  } catch (e) {
-    print('Result: No Crop Found');
-  }
-}
+  String? farmerName = stdin.readLineSync();
 
-String? cropName(List<Map<String, String>> farmers, String inputCrop) {
-  for (var farmer in farmers) {
-    if (farmer['crop'] == inputCrop) {
-      return farmer['name'];
+  for (int i = 0; i < farmers.length; i++) {
+    var farmerData = farmers[i];
+    if (farmerData['crop'] == inputCrop) {
+      farmerName = farmerData['name'];
     }
   }
 
-  return null;
+  if (farmerName != null) {
+    print('The farmer who grows $inputCrop is: $farmerName');
+  } else {
+    print('No farmer found for the crop: $inputCrop');
+  }
 }
